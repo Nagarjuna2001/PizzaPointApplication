@@ -1,0 +1,25 @@
+﻿@model PizzaPointApplication.ViewModels.PizzaAndToppingInputFromCustomer
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-controller="home" asp-action="index" method="post">
+    <div>
+        <label asp-for="pizzaType">Please enter the pizza which you want to order : </label>
+        <input asp-for="pizzaType" />
+
+    </div>
+    <div>
+        <label asp-for="toppingType">Please enter the topping which you want to order : </label>
+        <input asp-for="toppingType" />
+
+    </div>
+    @*<div>
+         <h6>Add toppings : </h6>
+         <a onclick="ProcessBaconTopping()">Bacon</a>
+    </div>*@
+
+    <div>
+        <button type="submit">Proceed to view Order Summary</button>
+    </div>
+</form>
